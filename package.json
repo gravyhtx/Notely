@@ -4,7 +4,7 @@
   "description": "Express based, note-taking disco party on a Heroku server",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,5 @@
   "homepage": "https://github.com/gravyhtx/Notely#readme",
   "dependencies": {
     "express": "^4.17.1"
-  },
-  "scripts": {
-    "start": "node server.js"
   }
 }

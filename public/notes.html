@@ -11,10 +11,50 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
+<style>
+  html,
+  body,
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  body {
+    font-family: "Istok Web", sans-serif;
+    text-align: center;
+}
+  .text {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    border: 2px solid #c0c7cf;
+    border-radius: 6px;
+    resize: none;
+    /* overflow: hidden; */
+    margin: 10px;
+  }
+  .note-title {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #c0c7cf;
+    border-radius: 6px;
+    resize: none;
+    overflow: hidden;
 
+  }
+</style>
 <body>
   <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Note Taker
+    <a class="navbar-brand" href="/">Notely
     </a>
     <div class="icons">
       <i class="fas fa-save text-light save-note"></i>
@@ -30,8 +70,10 @@
         </div>
       </div>
       <div class="col-8">
+        <br><br>
         <input class="note-title" placeholder="Note Title" maxlength="28" type="text">
-        <textarea class="note-textarea" placeholder="Note Text"></textarea>
+        <!-- <textarea class="note-textarea" placeholder="Note Text"></textarea> -->
+        <textarea placeholder="Note Text" class="text note-textarea" style="overflow:scroll" id="toDo11"></textarea>
       </div>
     </div>
   </div>
