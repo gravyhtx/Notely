@@ -25,19 +25,19 @@ app.use(express.json());
 //     });
 // });
 
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "./public/index.html"))
-})
+// app.get("/", function(req, res) {
+//   res.sendFile(path.join(__dirname, "./public/index.html"))
+// })
 
-app.route("/notes").get(function(req, res) {
-  res.sendFile(path.join(__dirname, "./public/index.html"))
-})
+// app.route("/notes").get(function(req, res) {
+//   res.sendFile(path.join(__dirname, "./public/index.html"))
+// })
 
-app.route("/api/notes").get(function(req, res) {
-  var notes;
-  readDb(notes);
-  res.json(notes);
-})
+// app.route("/api/notes").get(function(req, res) {
+//   var notes;
+//   readDb(notes);
+//   res.json(notes);
+// })
 
 
 // require("/public/assets/js/index")(app);
