@@ -7,6 +7,12 @@ var $saveNoteBtn = $(".save-note");
 var $newNoteBtn = $(".new-note");
 var $noteList = $(".list-container .list-group");
 
+
+
+
+
+
+
 // activeNote is used to keep track of the note in the textarea
 var activeNote = {};
 
@@ -99,7 +105,7 @@ var handleNewNoteView = function() {
 // If a note's title or text are empty, hide the save button
 // Or else show it
 var handleSaveBtn = function() {
-  if (!$noteTitle.val().trim() || !$noteText.val().trim()) {
+  if (!$noteTitle.val() || !$noteText.val()) {
     $saveNoteBtn.hide();
   } else {
     $saveNoteBtn.show();
