@@ -43,61 +43,61 @@ app.use(express.json());
 // require("/public/assets/js/index")(app);
 // // require("./routes/htmlRoutes")(app);
 
-app.listen(PORT, function() {
-    console.log("App listening on PORT: " + PORT);
-  });
+// app.listen(PORT, function() {
+//     console.log("App listening on PORT: " + PORT);
+//   });
   
 
-  var notes = [];
+  // var notes = [];
   
   // Routes
   // =============================================================
   
   // Basic route that sends the user first to the AJAX Page
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "index.html"));
-  });
+  // app.get("/", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "index.html"));
+  // });
   
-  app.get("/add", function(req, res) {
-    res.sendFile(path.join(__dirname, "notes.html"));
-  });
+  // app.get("/add", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "notes.html"));
+  // });
   
   // Displays all notes
-  app.get("/api/notes", function(req, res) {
-    return res.json(notes);
-  });
+  // app.get("/api/notes", function(req, res) {
+  //   return res.json(notes);
+  // });
   
-  // Displays a single note, or returns false
-  app.get("/api/notes/:id", function(req, res) {
-    var chosen = req.params.note;
+  // // Displays a single note, or returns false
+  // app.get("/api/notes/:id", function(req, res) {
+  //   var chosen = req.params.note;
   
-    console.log(chosen);
+  //   console.log(chosen);
   
-    for (var i = 0; i < notes.length; i++) {
-      if (chosen === notes[i].routeName) {
-        return res.json(notes[i]);
-      }
-    }
+  //   for (var i = 0; i < notes.length; i++) {
+  //     if (chosen === notes[i].routeName) {
+  //       return res.json(notes[i]);
+  //     }
+  //   }
   
-    return res.json(false);
-  });
+  //   return res.json(false);
+  // });
   
-  // Create New notes - takes in JSON input
-  app.post("/api/notes", function(req, res) {
-    // req.body hosts is equal to the JSON post sent from the user
-    // This works because of our body parsing middleware
-    var newnote = req.body;
+  // // Create New notes - takes in JSON input
+  // app.post("/api/notes", function(req, res) {
+  //   // req.body hosts is equal to the JSON post sent from the user
+  //   // This works because of our body parsing middleware
+  //   var newnote = req.body;
   
-    // Using a RegEx Pattern to remove spaces from newnote
-    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-    newnote.routeName = newnote.name.replace(/\s+/g, "");
+  //   // Using a RegEx Pattern to remove spaces from newnote
+  //   // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+  //   newnote.routeName = newnote.name.replace(/\s+/g, "");
   
-    console.log(newnote);
+  //   console.log(newnote);
   
-    notes.push(newnote);
+  //   notes.push(newnote);
   
-    res.json(newnote);
-  });
+  //   res.json(newnote);
+  // });
   
   // Starts the server to begin listening
   // =============================================================
